@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""银标第 1 步：探索性分析（EDA）——先看清「原料是什么」。
+"""银标第 1 步：探索性分析（EDA）
 
 银标原料 ≠ 已标注通假。
 Silver Label Data/output/corpus.jsonl 是古典文献正文（篇章级），
