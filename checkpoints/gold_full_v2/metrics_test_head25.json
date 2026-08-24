@@ -1,0 +1,26 @@
+{
+  "ckpt": "E:\\PythonFile\\Python\\WorkSpace_5\\ACPCR_and_OCP_System\\checkpoints\\gold_full_v2\\best.pt",
+  "full_span": {
+    "precision": 0.5804498269896193,
+    "recall": 0.5157571099154497,
+    "f1": 0.5461945461945461
+  },
+  "head_span_cover_25pct": {
+    "K": 122,
+    "train_span_cover": 0.25053017158280316,
+    "precision": 0.9122137404580153,
+    "recall": 0.8445229681978799,
+    "f1": 0.8770642201834863,
+    "gold_spans": 283.0,
+    "n_sents": 265.0
+  },
+  "head_type_quantile_25pct": {
+    "K": 915,
+    "train_span_cover": 0.6288798920377868,
+    "precision": 0.8471698113207548,
+    "recall": 0.6741741741741741,
+    "f1": 0.7508361204013378,
+    "gold_spans": 666.0,
+    "n_sents": 624.0
+  }
+}

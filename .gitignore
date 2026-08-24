@@ -1,0 +1,51 @@
+# Python / env
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+
+# Large ML artifacts (put on Release / 网盘，勿直接 push)
+models/
+checkpoints/**/*.pt
+checkpoints/**/*.bin
+checkpoints/**/*.safetensors
+*.pt
+*.bin
+*.safetensors
+
+# Keep small metric dumps if desired
+!checkpoints/**/metrics*.json
+!checkpoints/**/history.json
+!checkpoints/**/benzi_vocab.json
+
+# Raw / bulky data (按版权自行决定是否开源；默认忽略原料大包)
+data/Golden Label Data/
+data/Silver Label Data/
+# 若希望开源加工结果，可注释下一行
+# data/processed/
+
+# Logs / tmp
+*.log
+runs/
+wandb/
+.cache/

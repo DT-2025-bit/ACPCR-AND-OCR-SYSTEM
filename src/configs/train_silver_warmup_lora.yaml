@@ -1,0 +1,33 @@
+# A1 + A4：银标负例预热 → 金标精调（LoRA）
+model_name: models/chinese-bert-wwm-ext
+lstm_hidden: 256
+lstm_layers: 1
+dropout: 0.1
+
+use_lora: true
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules: [query, value]
+
+batch_size: 8
+grad_accum_steps: 2
+fp16: true
+seed: 42
+weight_decay: 0.01
+
+silver_path: data/processed/silver/silver_warmup.jsonl
+warmup_epochs: 1
+warmup_lr: 2.0e-4
+warmup_benzi_loss_weight: 0.0
+warmup_max_steps: 0
+
+epochs: 3
+gold_epochs: 3
+lr: 2.0e-4
+gold_lr: 2.0e-4
+max_steps: 0
+benzi_loss_weight: 1.0
+lexicon_filter: true
+
+out_dir: checkpoints/gold_lora_silver_warmup

@@ -1,0 +1,35 @@
+[project]
+name = "acpcr-and-ocp-system"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "accelerate>=1.14.0",
+    "datasets>=2.19.1",
+    "peft>=0.20.0",
+    "scikit-learn>=1.9.0",
+    "seqeval>=1.2.2",
+    "torch==2.13.0+cu130",
+    "torchaudio==2.11.0+cu130",
+    "torchvision==0.28.0+cu130",
+    "tqdm>=4.66.5",
+    "transformers>=5.15.0",
+    "pyyaml>=6.0",
+    "python-docx>=1.2.0",
+]
+
+# 默认走清华，加速普通依赖
+[[tool.uv.index]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+# GPU 版 PyTorch 专用源（与本机已验证通过的 cu130 一致）
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
+torchaudio = { index = "pytorch-cu130" }

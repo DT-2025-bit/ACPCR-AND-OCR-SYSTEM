@@ -1,0 +1,9 @@
+[
+  {
+    "phase": "silver_warmup",
+    "epoch": 1,
+    "step": 1392,
+    "train_loss": 0.35171025186434557,
+    "n": 11136
+  }
+]

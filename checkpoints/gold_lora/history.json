@@ -1,0 +1,50 @@
+[
+  {
+    "phase": "gold",
+    "epoch": 1,
+    "step": 1852,
+    "train_loss": 9.790781316264754,
+    "dev_loss": 8.973909475943772,
+    "precision": 0.6558139534883721,
+    "recall": 0.21543162719633308,
+    "f1": 0.3243243243243243,
+    "n_sents": 1851.0,
+    "benzi_acc_oracle": 0.6592818945760123,
+    "benzi_oracle_n": 1309.0,
+    "benzi_acc_on_pred_tj": 0.7553191489361702,
+    "benzi_pred_tj_n": 282.0,
+    "benzi_lexicon_constrain": 1.0
+  },
+  {
+    "phase": "gold",
+    "epoch": 2,
+    "step": 3704,
+    "train_loss": 8.07483514147838,
+    "dev_loss": 7.8570133249930985,
+    "precision": 0.6743589743589744,
+    "recall": 0.20091673032849502,
+    "f1": 0.3095938787522072,
+    "n_sents": 1851.0,
+    "benzi_acc_oracle": 0.6768525592055004,
+    "benzi_oracle_n": 1309.0,
+    "benzi_acc_on_pred_tj": 0.752851711026616,
+    "benzi_pred_tj_n": 263.0,
+    "benzi_lexicon_constrain": 1.0
+  },
+  {
+    "phase": "gold",
+    "epoch": 3,
+    "step": 5556,
+    "train_loss": 6.602841347518339,
+    "dev_loss": 7.049101735629757,
+    "precision": 0.7214854111405835,
+    "recall": 0.2077922077922078,
+    "f1": 0.32265717674970346,
+    "n_sents": 1851.0,
+    "benzi_acc_oracle": 0.6699770817417876,
+    "benzi_oracle_n": 1309.0,
+    "benzi_acc_on_pred_tj": 0.7573529411764706,
+    "benzi_pred_tj_n": 272.0,
+    "benzi_lexicon_constrain": 1.0
+  }
+]

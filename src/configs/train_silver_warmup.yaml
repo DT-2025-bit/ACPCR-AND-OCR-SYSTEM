@@ -1,0 +1,31 @@
+# A1：银标负例预热 1 epoch → 金标精调（全参）
+model_name: models/chinese-bert-wwm-ext
+lstm_hidden: 256
+lstm_layers: 1
+dropout: 0.1
+
+use_lora: false
+
+batch_size: 8
+grad_accum_steps: 2
+fp16: true
+seed: 42
+weight_decay: 0.01
+
+# --- warmup ---
+silver_path: data/processed/silver/silver_warmup.jsonl
+warmup_epochs: 1
+warmup_lr: 2.0e-5
+warmup_benzi_loss_weight: 0.0
+warmup_max_steps: 0
+
+# --- gold finetune ---
+epochs: 3
+gold_epochs: 3
+lr: 2.0e-5
+gold_lr: 2.0e-5
+max_steps: 0
+benzi_loss_weight: 1.0
+lexicon_filter: true
+
+out_dir: checkpoints/gold_full_silver_warmup

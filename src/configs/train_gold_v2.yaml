@@ -1,0 +1,26 @@
+# 主交付：全参加强版（更长训练 + 正例过采样 + 早停）
+# 面试主模型请用本配置重训 → checkpoints/gold_full_v2
+model_name: models/chinese-bert-wwm-ext
+lstm_hidden: 256
+lstm_layers: 1
+dropout: 0.1
+
+use_lora: false
+
+batch_size: 8
+grad_accum_steps: 2
+fp16: true
+epochs: 8
+early_stop_patience: 3
+lr: 2.0e-5
+weight_decay: 0.01
+seed: 42
+max_steps: 0
+
+# 正例再复制 1 份进训练集（约 ×2 正例曝光），抬召回
+pos_oversample: 2
+
+benzi_loss_weight: 1.0
+lexicon_filter: true
+
+out_dir: checkpoints/gold_full_v2

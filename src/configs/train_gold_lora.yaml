@@ -1,0 +1,25 @@
+# A4 对照：BERT-LoRA + BiLSTM + CRF + 本字头（金标多任务）
+model_name: models/chinese-bert-wwm-ext
+lstm_hidden: 256
+lstm_layers: 1
+dropout: 0.1
+
+use_lora: true
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules: [query, value]
+
+batch_size: 8
+grad_accum_steps: 2
+fp16: true
+epochs: 3
+lr: 2.0e-4
+weight_decay: 0.01
+seed: 42
+max_steps: 0
+
+benzi_loss_weight: 1.0
+lexicon_filter: true
+
+out_dir: checkpoints/gold_lora
